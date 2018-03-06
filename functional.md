@@ -37,3 +37,12 @@ assignment is to functional programming
 - internal iterator is polymorphic - applies on the collection/list passed
 - type is inferred at compile time
 - lambdas which receives the data and simply passes it -- office space pattern => change to method references
+
+## Fundamental shift: from imperative to functional style
+
+## Mapping operations - eliminating mutability
+
+## Declarative is expressive
+- tell me what, not how
+
+## Imperative vs Declarative
