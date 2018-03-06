@@ -32,5 +32,8 @@ public class SampleDecoratorCamera {
   }
   public static void main(String[] args) {
     printSnap(new Camera());
+    printSnap(new Camera(Color::brighter));
+    printSnap(new Camera(Color::darker));
+    printSnap(new Camera(Color::brighter, Color::darker)); // chain of decorations
   }
 }
