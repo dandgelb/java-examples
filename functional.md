@@ -36,3 +36,4 @@ assignment is to functional programming
 - Re-factoring from external to internal iterator
 - internal iterator is polymorphic - applies on the collection/list passed
 - type is inferred at compile time
+- lambdas which receives the data and simply passes it -- office space pattern => change to method references

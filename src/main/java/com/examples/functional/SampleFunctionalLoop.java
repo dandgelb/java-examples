@@ -1,7 +1,7 @@
 package com.examples.functional;
 
-import java.util.*;
-import java.util.function.Consumer;
+import java.util.Arrays;
+import java.util.List;
 
 public class SampleFunctionalLoop {
 
@@ -23,7 +23,8 @@ public class SampleFunctionalLoop {
 //      }
 //    });
       //numbers.forEach((Integer e) -> System.out.println(e));
-      numbers.forEach(e -> System.out.println(e));
+    //receiving the data and simply passing it -- office space pattern
+      numbers.forEach(System.out::println);
   }
 
 }
