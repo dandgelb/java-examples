@@ -10,12 +10,10 @@ class Resource implements AutoCloseable {
 
 public class SampleResource {
   public static void main(String [] args) {
-    //Java 7: ARM - Automatic Resource Management
-
     Resource resource = new Resource();
     resource.op1();
     resource.op2();
-  
+
     //problems
       //easy to forget ++ close()
       //exception - close() will not be called - solved with try and finally
