@@ -8,19 +8,21 @@ class Mailer {
   public Mailer to(String addr) { print("to"); return this;}
   public Mailer subject(String line) { print("subject"); return this;}
   public Mailer body(String msg) { print("body"); return this;}
-  public static void send() {
-     System.out.println("sending...");
+  public static void send(Consumer<Mailer> block) {
+    Mailer mailer = new Mailer();
+    block.accept(mailer);
+    System.out.println("sending...");
   }
 }
 
 public class SampleMailer {
   public static void main(String[] args) {
-    Mailer.send(mailer -> ...)
-      .from("builder@agiledeveloper.com")
-      .to("venkats@agiledeveloper.com")
-      .subject("Your code sucks")
-      .body("...here you go...")
-      .send();
+    Mailer.send(mailer ->
+      mailer
+        .from("builder@agiledeveloper.com")
+        .to("venkats@agiledeveloper.com")
+        .subject("Your code sucks")
+        .body("...here you go..."));
   }
 }
 
