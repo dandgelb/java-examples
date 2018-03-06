@@ -14,9 +14,10 @@ class Camera {
     // filter = Stream.of(filters)
     //                .reduce(initial, lamda)
     filter = Stream.of(filters)
-                   .reduce(
-                      color -> color,
-                      (theFilters, aFilter) -> theFilters.andThen(aFilter)
+                   .reduce(Function.identity(),
+                      Function::andThen
+                      //(theFilters, aFilter) -> theFilters.andThen(aFilter)
+                      //lamda is simply receiving parameters and passing it, it could be changed to a function reference
                    );
   }
   public Color snap(Color input) {
