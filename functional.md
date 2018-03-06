@@ -34,3 +34,4 @@ assignment is to functional programming
     - return type is inferred based on the context
     - name - who cares - anonymous 
 - Re-factoring from external to internal iterator
+- internal iterator is polymorphic - applies on the collection/list passed

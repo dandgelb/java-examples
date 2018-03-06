@@ -16,12 +16,13 @@ public class SampleFunctionalLoop {
 //      System.out.println(e);
 //    }
     //Internal iterators
-    numbers.forEach(new Consumer<Integer>() {
-      @Override
-      public void accept(Integer e) {
-        System.out.println(e);
-      }
-    });
+//    numbers.forEach(new Consumer<Integer>() {
+//      @Override
+//      public void accept(Integer e) {
+//        System.out.println(e);
+//      }
+//    });
+      numbers.forEach((Integer e) -> System.out.println(e));
   }
 
 }
