@@ -1,6 +1,9 @@
 import java.util.*;
 import java.util.function.*;
 //Execute around method call pattern  - pre op before methods and post op after methods - Line 22 and 23
+//also called as - Loan Pattern
+//can be used in transactions
+//or where policies needs to be embedded in code
 class Resource {
   private Resource() { System.out.println("created..."); }
   public Resource op1() { System.out.println("op1"); return this; }
