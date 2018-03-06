@@ -1,22 +1,22 @@
 import java.util.*;
 import java.util.function.*;
-
+//Creating fluent interfaces using lamdas - cascade method pattern.
 class Mailer {
   public static void print(String msg) { System.out.println(msg); }
-  public void from(String addr) { print("from"); }
-  public void to(String addr) { print("to"); }
-  public void subject(String line) { print("subject"); }
-  public void body(String msg) { print("body"); }
+  public Mailer from(String addr) { print("from"); return this;}
+  public Mailer to(String addr) { print("to"); return this;}
+  public Mailer subject(String line) { print("subject"); return this;}
+  public Mailer body(String msg) { print("body"); return this;}
   public void send() { System.out.println("sending..."); }
 }
 
 public class SampleMailer {
   public static void main(String[] args) {
-    Mailer mailer = new Mailer();
-    mailer.from("builder@agiledeveloper.com");
-    mailer.to("venkats@agiledeveloper.com");
-    mailer.subject("Your code sucks");
-    mailer.body("...here you go...");
-    mailer.send();
+    new Mailer()
+      .from("builder@agiledeveloper.com")
+      .to("venkats@agiledeveloper.com")
+      .subject("Your code sucks")
+      .body("...here you go...")
+      .send();
   }
 }
