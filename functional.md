@@ -33,3 +33,4 @@ assignment is to functional programming
     - (parameter list) -> body
     - return type is inferred based on the context
     - name - who cares - anonymous 
+- Re-factoring from external to internal iterator
