@@ -17,6 +17,12 @@ public class SampleDeclarative {
     //smells 
     //1. mutating result variable over and over again
     //2. what to do and how to do it
+    System.out.println(
+        numbers.stream()
+        .filter(e -> e % 2 == 0)
+        .mapToInt(e -> e * 2)
+        .sum()
+        );
   }
 
 }
