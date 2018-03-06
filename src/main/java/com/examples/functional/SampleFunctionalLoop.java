@@ -23,7 +23,7 @@ public class SampleFunctionalLoop {
 //      }
 //    });
       //numbers.forEach((Integer e) -> System.out.println(e));
-      numbers.forEach((e) -> System.out.println(e));
+      numbers.forEach(e -> System.out.println(e));
   }
 
 }

@@ -35,3 +35,4 @@ assignment is to functional programming
     - name - who cares - anonymous 
 - Re-factoring from external to internal iterator
 - internal iterator is polymorphic - applies on the collection/list passed
+- type is inferred at compile time
