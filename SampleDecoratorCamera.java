@@ -1,16 +1,18 @@
 import java.util.*;
+import java.util.function.*;
 import java.awt.*;
 
+@SuppressWarnings("unchecked")
 class Camera {
   private Function<Color, Color> filter;
   public Camera() {
     setFilters();
   }
   public void setFilters(Function<Color, Color>... filters) {
-
+    filter = color -> color;
   }
   public Color snap(Color input) {
-    return input;
+    return filter.apply(input);
   }
 }
 
